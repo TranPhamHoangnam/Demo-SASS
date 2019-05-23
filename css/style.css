@@ -1,0 +1,58 @@
+.container .mains {
+  color: brown;
+  border-color: tomato;
+}
+
+.sudung {
+  background-color: red;
+}
+
+.background, .main .main-content .content {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aquamarine;
+  border-radius: 20px;
+}
+
+.main .main-content .main-footer {
+  color: #333;
+  width: 100%;
+}
+
+.operator {
+  height: 500px;
+  width: 200px;
+  margin-right: 1;
+  color: #666666;
+  background-color: #666666;
+}
+
+.main {
+  color: #333;
+  width: 100%;
+}
+.main .main-content {
+  background-color: #333;
+  color: #333;
+  font-size: 30px;
+}
+.main .main-content a {
+  font-weight: 300;
+}
+.main .main-content a:hover {
+  color: red;
+}
+.main .main-content .content {
+  color: #fdf;
+  font-size: 50px;
+}
+.main .main-info {
+  font-family: arial;
+  font-size: 30px;
+  font-weight: both;
+  color: #333;
+  font-size: 30px;
+  color: #222;
+  font-size: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */

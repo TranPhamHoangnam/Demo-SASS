@@ -1,0 +1,39 @@
+$mau1: #333;
+$mau2: rgb(199, 114, 114);
+$mau3: white;
+
+$font1: 20px;
+
+.menu{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: $mau2;
+    padding: 30px 0;
+    ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        float: right;
+        li{
+            float: left;
+            padding: 0 20px;
+            a{
+                color: $mau1;
+                font-weight: bold;
+                font-size: $font1;
+                line-height: 30px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $mau3;
+                }
+            }
+        }
+    }
+}
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}

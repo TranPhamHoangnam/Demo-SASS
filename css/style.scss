@@ -1,0 +1,91 @@
+$colorDark: #333; // khai báo biến
+$colorRed: red;
+
+$fontsize1: 30px;
+$number: 2.5;
+
+$name : mains;
+$border: border;
+// interpolation ==> đặt tên biến là string sau đó gọi lại
+.container .#{$name}{
+    color: brown;
+    #{$border}-color: tomato;
+}
+
+// cách sử dụng điều kiện
+$dieukien: maudo;
+.sudung{
+    @if ($dieukien == maudo) {
+        background-color: red;
+    }
+    @else if ($dieukien == mauvang){
+        background-color: yellow;
+    }
+    @else{
+        background-color: blue;
+    }
+}
+
+@mixin tenmixin {
+    color: $colorDark;
+    font-size: $fontsize1;
+}
+
+@mixin ham2($bien1, $bien2) {
+    color: $bien1;
+    font-size: $bien2;
+}
+
+.background{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+
+%ghide{
+    color: $colorDark;
+    width: 100%;
+}
+
+.operator{ // toán tử
+
+    height:( 200px + 300px );
+    width:( 400px / 2 );
+    margin-right: round($number)/3; // round làm tròn ==> 2.5 => 3
+    color: #333 * 2;
+    background-color: #333 + #333;
+}
+
+.main{
+    color: $colorDark;
+    width: 100%;
+    .main-content{
+        background-color: $colorDark;
+
+        @include tenmixin(); // hàm không tham số
+
+        a{
+            font-weight: 300;
+            &:hover{
+                color: $colorRed;
+            }
+        }
+        .content{
+            @include ham2(#fdf, 50px); // hàm có tham số
+            @extend .background; // kế thừa
+        }
+        .main-footer{ // ghi đè
+            @extend %ghide
+        }
+    }
+    .main-info{
+        font: {
+            family: arial;
+            size: 30px;
+            weight: both;
+        }
+
+        @include tenmixin();
+        @include ham2(#222, 50px);
+    }
+}
